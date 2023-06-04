@@ -1,0 +1,65 @@
+.game {
+	gap: 5rem;
+	width: 100%;
+	height: 100%;
+
+	.game-body {
+		gap: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.failed-icon,
+		.success-icon {
+			font-size: 5rem;
+			opacity: 0.5;
+		}
+
+		.failed-title,
+		.success-title {
+			font-size: 2rem;
+		}
+
+		.failed-title,
+		.success-title,
+		.failed-description,
+		.success-description {
+			white-space: unset;
+			max-width: 22.5rem;
+			font-weight: 600;
+			padding: 0 1rem;
+			text-align: center;
+			opacity: 0.5;
+		}
+
+		.question {
+			font-size: 2rem;
+			margin-bottom: 10px;
+			opacity: 0.5;
+		}
+
+		.equation {
+			font-weight: 700;
+		}
+
+		.response {
+			opacity: 0.85;
+			position: relative;
+		}
+
+		.message {
+			margin: 0 0 7.5px 0;
+			font-size: 1.5rem;
+			font-weight: 600;
+
+			&[data-success='true'] {
+				color: var(--mui-palette-success-main);
+			}
+
+			&[data-success='false'] {
+				color: var(--mui-palette-error-main);
+			}
+		}
+	}
+}

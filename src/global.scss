@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+	--mui-palette-error-main: var(--mui-palette-error-light) !important;
+
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	background-color: var(--mui-palette-secondary-contrastText);
+	color: var(--mui-palette-common-onBackground);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+
+	&[data-mui-color-scheme='light']::before {
+		opacity: 0.5;
+	}
+
+	&[data-mui-color-scheme='dark']::before {
+		opacity: 0.35;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+
+		width: 100%;
+		height: 100%;
+
+		left: 0;
+		top: 0;
+		padding: 0;
+		margin: 0;
+
+		background-image: linear-gradient(270deg, #ffb0b0, #fff8bd, #dbfbbd, #a8f5e5, #a8c5f5, #c5a8f5, #f5a8e5, #f5a8a8);
+		background-size: 500% 500%;
+		animation: gradient 5s ease infinite;
+	}
+}
+
+body,
+#root {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
